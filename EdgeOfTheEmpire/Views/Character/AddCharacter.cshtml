@@ -1,0 +1,82 @@
+﻿@model EdgeOfTheEmpire.Models.InitialCharacter
+
+<form asp-action="AddCharacter" method="post" class="form-horizontal" role="form">
+
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Player" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Player" class="form-control" />
+            <span asp-validation-for="Player" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Race" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Race" class="form-control" />
+            <span asp-validation-for="Race" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Brawn" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Brawn" class="form-control" />
+            <span asp-validation-for="Brawn" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Agility" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Agility" class="form-control" />
+            <span asp-validation-for="Agility" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Intelligence" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Intelligence" class="form-control" />
+            <span asp-validation-for="Intelligence" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cunning" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Cunning" class="form-control" />
+            <span asp-validation-for="Cunning" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Willpower" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Willpower" class="form-control" />
+            <span asp-validation-for="Willpower" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Presence" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Presence" class="form-control" />
+            <span asp-validation-for="Presence" class="text-danger"></span>
+        </div>
+    </div>  
+     
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="AddCharacter" />
+        </div>
+    </div>
+</form>

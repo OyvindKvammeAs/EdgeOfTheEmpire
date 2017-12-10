@@ -1,0 +1,8 @@
+﻿@model IEnumerable<EdgeOfTheEmpire.Models.Specialization>
+
+    @foreach (var specialization in Model)
+    {
+        <h2>
+            <a asp-controller="Specialization" asp-action="Index" asp-route-specializationName="@specialization.SpecializationName">@specialization.SpecializationName</a>
+        </h2>
+    }

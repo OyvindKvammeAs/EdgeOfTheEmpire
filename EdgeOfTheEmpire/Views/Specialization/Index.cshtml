@@ -1,0 +1,35 @@
+﻿@model  EdgeOfTheEmpire.ViewModels.SpecializationInfoViewModel
+
+<div class="container">
+    <h2>@Model.Specialization.SpecializationName</h2>
+
+    <div class="col-md-12">
+        <div class="container">
+            <h3>Skills</h3>
+            <ul>
+                @foreach (var skill in Model.Skills)
+                {
+                    <li>
+                <a asp-controller="Skill" asp-action="Index" asp-route-skill="@skill.Name">@skill.Name</a>
+                    </li>
+                }
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>Talents</h3>
+        @foreach (var talent in Model.TalentTree.TalentTreeData.Values)
+        {
+            <div class="col-md-3">
+                <div class="container">
+                    <a asp-controller="Talent" asp-action="Index" asp-route-talentName="@talent.TalentName">@talent.TalentName</a>
+                </div>
+            </div>
+        }
+
+
+    </div>
+    
+</div>

@@ -1,0 +1,8 @@
+﻿@model IEnumerable<EdgeOfTheEmpire.Models.Skill>
+
+    @foreach (var skill in Model)
+    {
+        <h2>
+            <a asp-controller="Skill" asp-action="Index" asp-route-skill="@skill.Name">@skill.Name</a>
+        </h2>
+    }

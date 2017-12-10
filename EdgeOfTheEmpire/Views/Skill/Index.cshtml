@@ -1,0 +1,24 @@
+﻿@model EdgeOfTheEmpire.ViewModels.SkillViewModel
+<div class="container">
+    <h1>@Model.Skill.Name</h1>
+    <p>@Model.Skill.Description</p>
+    
+    <div class="col-md-6">
+         <h4>Career skill in the following careers</h4>
+        <ul>
+            @foreach (var career in Model.Careers)
+            {
+                <li><a asp-controller="Career" asp-action="Index" asp-route-career="@career.CareerName">@career.CareerName</a></li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h4>Specialization skill in the following specializations</h4>
+        <ul>
+            @foreach (var specialization in Model.Specializations)
+            {
+                <li><a asp-controller="Specialization" asp-action="Index" asp-route-specializationName="@specialization.SpecializationName">@specialization.SpecializationName</a></li>
+            }
+        </ul>
+    </div>
+</div>

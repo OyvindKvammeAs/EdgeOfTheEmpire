@@ -1,0 +1,8 @@
+﻿@model IEnumerable<EdgeOfTheEmpire.Models.Talent>
+
+    @foreach (var talent in Model)
+    {
+        <h2>
+            <a asp-controller="Talent" asp-action="Index" asp-route-talentName="@talent.TalentName">@talent.TalentName</a>
+        </h2>
+    }

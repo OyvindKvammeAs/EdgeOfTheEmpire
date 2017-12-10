@@ -1,0 +1,15 @@
+﻿@model  EdgeOfTheEmpire.ViewModels.TalentInfoViewModel
+
+<div class="container">
+    <h2>@Model.Talent.TalentName</h2>   
+    
+    <div class="col-md-6">
+        <h4>talent found in the following specializations</h4>
+        <ul>
+            @foreach (var specialization in Model.Specializations)
+            {
+                <li><a asp-controller="Specialization" asp-action="Index" asp-route-specializationName="@specialization.SpecializationName">@specialization.SpecializationName</a></li>
+            }
+        </ul>
+    </div>
+</div>
