@@ -11,9 +11,10 @@ using System;
 namespace EdgeOfTheEmpire.Migrations
 {
     [DbContext(typeof(CharacterDbContext))]
-    partial class CharacterDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180402092649_advances")]
+    partial class advances
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,20 +33,6 @@ namespace EdgeOfTheEmpire.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CharacterBattleScarAdvances");
-                });
-
-            modelBuilder.Entity("EdgeOfTheEmpire.Entities.CharacterSignatureAbility", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CharacterId");
-
-                    b.Property<string>("SignatureAbility");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CharacterSignatureAbilities");
                 });
 
             modelBuilder.Entity("EdgeOfTheEmpire.Entities.CharacterSignatureAbilityAdvance", b =>
@@ -80,21 +67,6 @@ namespace EdgeOfTheEmpire.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CharacterSkillAdvances");
-                });
-
-            modelBuilder.Entity("EdgeOfTheEmpire.Entities.CharacterSpecialization", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CharacterId");
-
-                    b.Property<string>("Specialization")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CharacterSpecializations");
                 });
 
             modelBuilder.Entity("EdgeOfTheEmpire.Entities.CharacterSpecializationAdvance", b =>

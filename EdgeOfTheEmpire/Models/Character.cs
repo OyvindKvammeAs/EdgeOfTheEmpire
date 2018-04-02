@@ -8,11 +8,23 @@ namespace EdgeOfTheEmpire.Models
     {
         private InitialCharacter initial;
         private IList<CharacterSpecializationAdvance> specializationAdvances;
+        private IList<CharacterSkillAdvance> skillAdvance;
+        private IList<CharacterSignatureAbilityAdvance> signatureAbilityAdvance;
+        private IList<CharacterBattleScarAdvance> battleScarAdvance;
 
-        public Character(InitialCharacter initial, IList<CharacterSpecializationAdvance> specializationAdvances)
+        public Character(InitialCharacter initial, 
+            IList<CharacterSpecializationAdvance> specializationAdvances,
+            IList<CharacterSkillAdvance> skillAdvance,
+            IList<CharacterSignatureAbilityAdvance> signatureAbilityAdvance,
+            IList<CharacterBattleScarAdvance> battleScarAdvance
+
+            )
         {
             this.initial = initial;
             this.specializationAdvances = specializationAdvances;
+            this.skillAdvance = skillAdvance;
+            this.signatureAbilityAdvance = signatureAbilityAdvance;
+            this.battleScarAdvance = battleScarAdvance;
         }
         public String Name => initial.Name;
         public string Race => initial.Race;

@@ -1,9 +1,5 @@
 ﻿using EdgeOfTheEmpire.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EdgeOfTheEmpire.Models
 {
@@ -13,9 +9,12 @@ namespace EdgeOfTheEmpire.Models
         {
 
         }
-        public DbSet<InitialCharacter> Characters { get; set; }      
+        public DbSet<InitialCharacter> Characters { get; set; }
+        public DbSet<EdgeOfTheEmpire.Entities.CharacterSpecialization> CharacterSpecializations { get; set; }
         public DbSet<CharacterSpecializationAdvance> CharacterSpecializationAdvances { get; set; }
         public DbSet<CharacterSkillAdvance> CharacterSkillAdvances { get; set; }
+        public DbSet<CharacterSignatureAbility> CharacterSignatureAbilities { get; set; }        
         public DbSet<CharacterSignatureAbilityAdvance> CharacterSignatureAbilityAdvances { get; set; }
+        public DbSet<CharacterBattleScarAdvance> CharacterBattleScarAdvances { get; set; }
     }
 }

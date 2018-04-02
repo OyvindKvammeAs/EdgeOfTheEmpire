@@ -38,10 +38,96 @@ namespace EdgeOfTheEmpire.Controllers
         }
 
         [HttpPost]
-
         public IActionResult AddCharacter(InitialCharacter character)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             characterRepository.AddCharacter(character);
+            return View();
+        }
+
+        public IActionResult AddBattleScarAdvance()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddBattleScarAdvance(CharacterBattleScarAdvance battleScarAdvance)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            characterRepository.AddBattleScarAdvance(battleScarAdvance);
+            return View();
+        }
+
+        public IActionResult AddSkillAdvance()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddSkillAdvance(CharacterSkillAdvance skillAdvance)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            characterRepository.AddSkillAdvance(skillAdvance);
+            return View();
+        }
+
+        public IActionResult AddSpecializationAdvance()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddSpecializationAdvance(CharacterSpecializationAdvance specializationAdvance)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            characterRepository.AddSpecializationAdvance(specializationAdvance);
+            return View();
+        }
+
+        public IActionResult AddSignatureAbility()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddSignatureAbility(CharacterSignatureAbility signatureAbility)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            characterRepository.AddSignatureAbility(signatureAbility);
+            return View();
+        }
+
+
+        public IActionResult AddSignatureAbilityAdvance()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddSignatureAbilityAdvance(CharacterSignatureAbilityAdvance signatureAbilityAdvance)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            characterRepository.AddSignatureAbilityAdvance(signatureAbilityAdvance);
+            return View();
+        }
+
+
+
+        public IActionResult AddSpecialization()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddSpecialization(Entities.CharacterSpecialization specialization)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            characterRepository.AddSpecialization(specialization);
             return View();
         }
     }
